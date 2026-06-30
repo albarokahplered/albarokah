@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -51,14 +50,12 @@ function Footer() {
                       <div className="footer-item mt-5">
                           <h4 className="text-light mb-4">Explore Link</h4>
                           <div className="d-flex flex-column align-items-start">
-                              <Link className="text-body mb-2" to="/"><i className="fa fa-check text-primary me-2"></i>Home</Link>
-                              <Link className="text-body mb-2" to="/about"><i className="fa fa-check text-primary me-2"></i>About Us</Link>
-                              <Link className="text-body mb-2" to="/activity"><i className="fa fa-check text-primary me-2"></i>Our Features</Link>
-                              <Link className="text-body mb-2" to="/contact"><i className="fa fa-check text-primary me-2"></i>Contact us</Link>
-                              <Link className="text-body mb-2" to="/blog"><i className="fa fa-check text-primary me-2"></i>Our Blog</Link>
-                              <Link className="text-body mb-2" to="/event"><i className="fa fa-check text-primary me-2"></i>Our Events</Link>
-                              <Link className="text-body mb-2" to="/"><i className="fa fa-check text-primary me-2"></i>Donations</Link>
-                              <Link className="text-body mb-2" to="/sermon"><i className="fa fa-check text-primary me-2"></i>Sermons</Link>
+                              <a className="text-body mb-2" href="#home"><i className="fa fa-check text-primary me-2"></i>Home</a>
+                              <a className="text-body mb-2" href="#about"><i className="fa fa-check text-primary me-2"></i>About Us</a>
+                              <a className="text-body mb-2" href="#activities"><i className="fa fa-check text-primary me-2"></i>Our Features</a>
+                              <a className="text-body mb-2" href="#blog"><i className="fa fa-check text-primary me-2"></i>Our Blog</a>
+                              <a className="text-body mb-2" href="#event"><i className="fa fa-check text-primary me-2"></i>Our Events</a>
+                              <a className="text-body mb-2" href="#sermon"><i className="fa fa-check text-primary me-2"></i>Sermons</a>
                           </div>
                       </div>
                   </div>

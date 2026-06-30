@@ -452,3 +452,6 @@ footer {
     font-size: 2.5rem;
   }
 }
+
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+

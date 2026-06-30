@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       {/* Hero Start */}
-        <div className="container-fluid hero-header">
+        <div id="home" className="container-fluid hero-header">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-7">
@@ -21,7 +21,7 @@ function Home() {
 
 
         {/* About Satrt */}
-        <div className="container-fluid about py-5">
+        <div id="about" className="container-fluid about py-5">
             <div className="container py-5">
                 <div className="row g-5 mb-5">
                     <div className="col-xl-6">
@@ -104,7 +104,7 @@ function Home() {
 
 
         {/* Activities Start */}
-        <div className="container-fluid activities py-5">
+        <div id="activities" className="container-fluid activities py-5">
             <div className="container py-5">
                 <div className="mx-auto text-center mb-5 wow fadeIn" data-wow-delay="0.1s" style={{maxWidth: '700px'}}>
                     <p className="fs-5 text-uppercase text-primary">Activities</p>
@@ -178,7 +178,7 @@ function Home() {
 
 
         {/* Events Start */}
-        <div className="container-fluid event py-5">
+        <div id="event" className="container-fluid event py-5">
             <div className="container py-5">
                 <h1 className="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">Upcoming <span className="text-primary">Events</span></h1>
                 <div className="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
@@ -250,7 +250,7 @@ function Home() {
 
 
         {/* Sermon Start */}
-        <div className="container-fluid sermon py-5">
+        <div id="sermon" className="container-fluid sermon py-5">
             <div className="container py-5">
                 <div className="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style={{maxWidth: '700px'}}>
                     <p className="fs-5 text-uppercase text-primary">Sermons</p>
@@ -336,7 +336,7 @@ function Home() {
 
 
         {/* Blog Start */}
-        <div className="container-fluid py-5">
+        <div id="blog" className="container-fluid py-5">
             <div className="container py-5">
                 <h1 className="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">Latest From <span className="text-primary">Our Blog</span></h1>
                 <div className="row g-4 justify-content-center">
@@ -416,7 +416,7 @@ function Home() {
 
 
         {/* Team Start */}
-        <div className="container-fluid team py-5">
+        <div id="team" className="container-fluid team py-5">
             <div className="container py-5">
                 <div className="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style={{maxWidth: '700px'}}>
                     <p className="fs-5 text-uppercase text-primary">Our Team</p>
@@ -502,7 +502,7 @@ function Home() {
 
 
         {/* Testiminial Start */}
-        <div className="container-fluid testimonial py-5">
+        <div id="testimonial" className="container-fluid testimonial py-5">
             <div className="container py-5">
                 <div className="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style={{maxWidth: '700px'}}>
                     <p className="fs-5 text-uppercase text-primary">Testimonial</p>
