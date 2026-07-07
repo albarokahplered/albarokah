@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FloatingButtons from './components/FloatingButtons';
 import Home from './pages/Home';
 
 function ScriptInitializer() {
@@ -49,6 +50,7 @@ function App() {
         {/* We will add other routes later */}
       </Routes>
       <Footer />
+      <FloatingButtons />
     </Router>
   );
 }
