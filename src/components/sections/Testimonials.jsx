@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Testimonials() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [comment, setComment] = useState('');
+
   const testimonials = [
     {
       name: 'Bapak Ahmad',
@@ -28,8 +31,16 @@ function Testimonials() {
     }
   ];
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(comment.trim() !== '') {
+      alert("Terima kasih! Testimoni Anda telah dikirim dan sedang menunggu persetujuan admin.");
+      setComment('');
+    }
+  };
+
   return (
-    <section className="section-padding bg-light">
+    <section id="testimoni" className="section-padding bg-light">
       <div className="container">
         <div className="section-title">
           <h2>Testimoni Jamaah</h2>
@@ -37,7 +48,7 @@ function Testimonials() {
         </div>
         
         <div 
-          className="d-flex gap-4 pb-4" 
+          className="d-flex gap-4 pb-4 mb-5" 
           style={{ 
             overflowX: 'auto', 
             scrollSnapType: 'x mandatory', 
@@ -63,6 +74,45 @@ function Testimonials() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Add Testimonial Section */}
+        <div className="row justify-content-center mt-5">
+          <div className="col-lg-8">
+            <div className="card-modern p-4 p-md-5 text-center">
+              <h4 className="fw-bold mb-3">Berikan Testimoni Anda</h4>
+              <p className="text-muted mb-4">Kritik, saran, dan apresiasi Anda sangat berharga bagi kami untuk terus meningkatkan layanan.</p>
+              
+              {!isLoggedIn ? (
+                <button onClick={() => setIsLoggedIn(true)} className="btn btn-outline-dark rounded-pill py-2 px-4 d-inline-flex align-items-center gap-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" style={{ width: '20px' }} />
+                  Login dengan Google
+                </button>
+              ) : (
+                <form onSubmit={handleSubmit} className="text-start mt-4">
+                  <div className="d-flex align-items-center mb-3">
+                    <img src="https://ui-avatars.com/api/?name=User&background=4CAF7D&color=fff" alt="User" className="rounded-circle me-3" style={{ width: '40px' }} />
+                    <span className="fw-bold">Login sebagai Pengguna</span>
+                  </div>
+                  <div className="mb-3">
+                    <label className="form-label text-muted small">Komentar Anda</label>
+                    <textarea 
+                      className="form-control" 
+                      rows="4" 
+                      placeholder="Tuliskan pengalaman Anda bersama Masjid Al-Barokah..."
+                      value={comment}
+                      onChange={(e) => setComment(e.target.value)}
+                      style={{ borderRadius: '12px' }}
+                      required
+                    ></textarea>
+                  </div>
+                  <div className="text-end">
+                    <button type="submit" className="btn btn-modern">Kirim Testimoni</button>
+                  </div>
+                </form>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>

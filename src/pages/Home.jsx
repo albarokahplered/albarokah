@@ -1,7 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/sections/HeroSection';
 import PrayerSchedule from '../components/sections/PrayerSchedule';
-import Services from '../components/sections/Services';
 import Agenda from '../components/sections/Agenda';
 import News from '../components/sections/News';
 import Gallery from '../components/sections/Gallery';
@@ -15,7 +14,6 @@ function Home() {
     <>
       <HeroSection />
       <PrayerSchedule />
-      <Services />
       <Agenda />
       <News />
       <Gallery />

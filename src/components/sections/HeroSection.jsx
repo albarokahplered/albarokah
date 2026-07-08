@@ -1,8 +1,47 @@
 import React from 'react';
 
 function HeroSection() {
+  const services = [
+    {
+      title: 'Jadwal Sholat',
+      desc: 'Lihat jadwal sholat lengkap beserta imam dan muadzin.',
+      icon: 'fa-clock',
+      link: '#jadwal'
+    },
+    {
+      title: 'Kajian Rutin',
+      desc: 'Informasi kajian mingguan, bulanan, dan kajian spesial.',
+      icon: 'fa-book-reader',
+      link: '#kajian'
+    },
+    {
+      title: "TPQ & Belajar Al-Qur'an",
+      desc: "Program belajar Al-Qur'an untuk anak, remaja, dan dewasa.",
+      icon: 'fa-quran',
+      link: '#pendidikan'
+    },
+    {
+      title: 'Zakat, Infak & Sedekah',
+      desc: 'Donasi online secara mudah dan transparan.',
+      icon: 'fa-hand-holding-heart',
+      link: '#donasi'
+    },
+    {
+      title: 'Agenda Masjid',
+      desc: 'Seluruh kegiatan yang akan datang.',
+      icon: 'fa-calendar-alt',
+      link: '#agenda'
+    },
+    {
+      title: 'Laporan Keuangan',
+      desc: 'Laporan pemasukan dan pengeluaran masjid.',
+      icon: 'fa-chart-bar',
+      link: '#keuangan'
+    }
+  ];
+
   return (
-    <section id="home" className="position-relative" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+    <section id="home" className="position-relative" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingBottom: '100px' }}>
       {/* Background Image with Overlay */}
       <div 
         className="position-absolute w-100 h-100" 
@@ -25,45 +64,32 @@ function HeroSection() {
             <p className="lead text-white-50 mb-5">
               Pusat Ibadah, Dakwah, Pendidikan, dan Pelayanan Umat.
             </p>
-            <div className="d-flex justify-content-center gap-3">
-              <a href="#agenda" className="btn btn-modern">Lihat Agenda</a>
-              <a href="#donasi" className="btn btn-modern" style={{ backgroundColor: '#fff', color: 'var(--primary)' }}>Donasi Sekarang</a>
-            </div>
           </div>
         </div>
 
-        {/* Quick Info Cards */}
-        <div className="row g-4 mt-5 pt-4">
-          <div className="col-md-3 col-sm-6">
-            <div className="card-modern text-center" style={{ padding: '20px' }}>
-              <i className="fa fa-mosque fa-2x text-primary mb-3"></i>
-              <h6 className="fw-bold mb-1">Jadwal Sholat</h6>
-              <p className="text-muted small mb-0">Hari Ini</p>
+        {/* 6 Services Cards */}
+        <div className="row g-4 mt-5">
+          {services.map((service, index) => (
+            <div key={index} className="col-lg-4 col-md-6">
+              <a href={service.link} className="text-decoration-none text-dark">
+                <div className="card-modern text-center h-100 service-card" style={{ padding: '20px' }}>
+                  <div className="mb-3">
+                    <i className={`fa ${service.icon} fa-2x text-primary service-icon`} style={{ transition: 'var(--transition)' }}></i>
+                  </div>
+                  <h6 className="mb-2 fw-bold">{service.title}</h6>
+                  <p className="text-muted small mb-0">{service.desc}</p>
+                </div>
+              </a>
             </div>
-          </div>
-          <div className="col-md-3 col-sm-6">
-            <div className="card-modern text-center" style={{ padding: '20px' }}>
-              <i className="fa fa-calendar-alt fa-2x text-primary mb-3"></i>
-              <h6 className="fw-bold mb-1">Agenda</h6>
-              <p className="text-muted small mb-0">Terdekat</p>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6">
-            <div className="card-modern text-center" style={{ padding: '20px' }}>
-              <i className="fa fa-book-open fa-2x text-primary mb-3"></i>
-              <h6 className="fw-bold mb-1">Kajian</h6>
-              <p className="text-muted small mb-0">Berikutnya</p>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6">
-            <div className="card-modern text-center" style={{ padding: '20px' }}>
-              <i className="fa fa-heart fa-2x text-primary mb-3"></i>
-              <h6 className="fw-bold mb-1">Total Donasi</h6>
-              <p className="text-muted small mb-0">Bulan Ini</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+      <style>{`
+        .service-card:hover .service-icon {
+          color: var(--primary-dark) !important;
+          transform: scale(1.1);
+        }
+      `}</style>
     </section>
   );
 }
