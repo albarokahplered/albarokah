@@ -1,8 +1,9 @@
 :root {
   --primary: #4CAF7D;
   --primary-dark: #3d8c64;
+  --accent: #D4AF37; /* Gold */
   --bg-light: #F8F9FA;
-  --text-main: #333333;
+  --text-main: #111827; /* Near Black */
   --text-muted: #6c757d;
   --white: #FFFFFF;
   --border-radius: 16px;

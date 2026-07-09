@@ -18,13 +18,20 @@ function Header() {
   return (
     <nav className={`navbar navbar-expand-lg fixed-top navbar-modern ${isScrolled ? 'shadow-sm' : ''}`} style={{ padding: isScrolled ? '15px 0' : '20px 0' }}>
       <div className="container">
-        <a href="#home" className="navbar-brand d-flex align-items-center">
-          <i className="fa fa-mosque text-primary fa-2x me-2"></i>
-          <h2 className="mb-0 fw-bold">Al-Barokah</h2>
-        </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span className="fa fa-bars text-primary"></span>
-        </button>
+        <div className="d-flex align-items-center">
+          <a href="#home" className="navbar-brand d-flex align-items-center me-0">
+            <img src="/img/logo.png" alt="Logo Masjid Al-Barokah" style={{ height: '50px' }} />
+          </a>
+          <a href="#donasi" className="btn btn-modern ms-3 d-none d-sm-inline-flex py-2 px-3">Donasi</a>
+        </div>
+        
+        <div className="d-flex align-items-center">
+          <a href="#donasi" className="btn btn-modern me-2 d-inline-flex d-sm-none py-1 px-2" style={{ fontSize: '14px' }}>Donasi</a>
+          <button className="navbar-toggler border-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span className="fa fa-bars text-primary fs-3"></span>
+          </button>
+        </div>
+
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav ms-auto align-items-center">
             <a href="#home" className="nav-item nav-link">Beranda</a>
@@ -36,7 +43,6 @@ function Header() {
             <a href="#pengurus" className="nav-item nav-link">Pengurus</a>
             <a href="#keuangan" className="nav-item nav-link">Keuangan</a>
             <a href="#kontak" className="nav-item nav-link">Kontak</a>
-            <a href="#donasi" className="btn btn-modern ms-lg-3 mt-3 mt-lg-0">Donasi</a>
           </div>
         </div>
       </div>

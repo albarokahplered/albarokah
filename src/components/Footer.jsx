@@ -6,9 +6,8 @@ function Footer() {
       <div className="container pb-4">
         <div className="row g-5">
           <div className="col-lg-4 col-md-6">
-            <a href="#home" className="d-flex align-items-center mb-4 text-white text-decoration-none">
-              <i className="fa fa-mosque fa-2x me-2 text-primary"></i>
-              <h3 className="mb-0 fw-bold">Al-Barokah</h3>
+            <a href="#home" className="d-flex align-items-center mb-4 text-decoration-none">
+              <img src="/img/logo.png" alt="Logo Masjid Al-Barokah" style={{ height: '60px' }} />
             </a>
             <p className="text-white-50 mb-4">
               Pusat Ibadah, Dakwah, Pendidikan, dan Pelayanan Umat. Kami berkomitmen untuk melayani jamaah dengan sepenuh hati dan profesional.
