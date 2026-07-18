@@ -47,7 +47,7 @@ function HeroSection() {
         className="position-absolute w-100 h-100" 
         style={{ 
           top: 0, left: 0, zIndex: -1, 
-          backgroundImage: 'url("/img/hero-bg.jpg")', 
+          backgroundImage: 'url("/img/beranda-bg.jpg")', 
           backgroundSize: 'cover', 
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
